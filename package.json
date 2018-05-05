@@ -2,7 +2,7 @@
   "name": "hapi-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "preinstall": "npm i -g pm2",
     "prod": "NODE_ENV=production pm2-docker server.js",

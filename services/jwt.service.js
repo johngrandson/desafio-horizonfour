@@ -1,13 +1,12 @@
 const jwt = require('jsonwebtoken');
 const User = require('../modules/user/user.model');
-const config = require('../config/development');
 
 module.exports = {
 
     issue(options) {
 
         let {payload, expiresIn} = options;
-        return jwt.sign(payload, config.secret, {
+        return jwt.sign(payload, process.env.secret, {
             expiresIn: expiresIn
         })
 

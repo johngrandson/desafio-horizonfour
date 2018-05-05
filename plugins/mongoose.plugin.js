@@ -4,11 +4,11 @@ const MongoosePlugin ={
     register: function (server, options, next) {
 
         mongoose.Promise = require('bluebird');
-        mongoose.connect(options.mongoDbUri, {
+        mongoose.connect(process.env.MONGO_URL, {
             useMongoClient: true
         });
         mongoose.connection.on('connected', () => {
-            console.log(`app is connected to ${options.mongoDbUri}`);
+            console.log(`app is connected to ${process.env.MONGO_URL}`);
         });
         mongoose.connection.on('error', err => {
             console.log('error while connecting to mongodb', err);
