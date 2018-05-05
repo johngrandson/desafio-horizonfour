@@ -1,3 +1,5 @@
 node_modules/
 .vscode
-hapiProject/awesome_log
+awesome_log
+config/*.env.prod
+config/*.env.dev
