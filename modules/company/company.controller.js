@@ -74,7 +74,7 @@ module.exports = {
                 return reply(err).code(404);
             }
             return reply.response(company);
-
+            // comment
         })
     },
     findEmployeeByRole(req, reply) {
