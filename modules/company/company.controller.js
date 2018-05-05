@@ -78,10 +78,10 @@ module.exports = {
         })
     },
     findEmployeeByRole(req, reply) {
-        Employee.find({role:req.params.role}).then((err, employee) => {
-            if (err)
+        Employee.find({role:req.params.role}, (err, employee) => {
+            if (err) {
                 return reply(err).code(404);
-
+            }
             return reply.response(employee);
         });
     },
