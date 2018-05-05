@@ -38,7 +38,7 @@ module.exports = [
     {
         register: MongoosePlugin,
         options: {
-            mongoDbUri: 'mongodb://localhost/empresadb'
+            mongoDbUri: 'mongodb://127.0.0.1/empresadb'
         }
     },
     Inert,

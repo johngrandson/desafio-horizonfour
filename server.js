@@ -23,7 +23,7 @@ server.register(plugins, (err) => {
         }
 
         server.auth.strategy('jwt','jwt',{
-           key: config.secret,
+           key: process.env.secret,
            verifyOptions:{
                algorithm: ['HS256']
            },
@@ -32,6 +32,6 @@ server.register(plugins, (err) => {
 
         server.auth.default('jwt');
 
-        console.log(`Server running in ${process.env.NODE_ENV || 'development'} on port ${process.env.port}...`);
+        console.log(`Server running in ${process.env.NODE_ENV || 'DEV'} on port ${process.env.port}...`);
     });
 });
