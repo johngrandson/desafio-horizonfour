@@ -1,5 +1,5 @@
 node_modules/
 .vscode
 awesome_log
-config/*.env.prod
-config/*.env.dev
+*.env.prod
+*.env.dev
